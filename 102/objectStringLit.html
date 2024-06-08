@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const empName='siri';
+        const employee={
+            empName,                //1
+            getEmpName2(){          //2  instead of dng these getEmpName2 : function(){}
+                return this.empName
+            },
+            [empName+"_"+2]:empName //3
+        }
+        console.log(employee);
+
+
+        const color='red'
+        const point={
+            x:5,
+            y:10,
+            color,
+            fname(){
+                return "X="+this.x," Y="+this.y," color = "+this.color;
+            },
+            ['prop_'+42]:52
+        }
+        console.log(point);
+        console.log("dynamic property "+point.prop_42);
+    </script>
+</body>
+</html>

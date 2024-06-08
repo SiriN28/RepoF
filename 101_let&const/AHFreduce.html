@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array=[1,2,3,4]
+        var sumOfArrayEle=array.reduce(function(acculumator,sum){
+            return acculumator + sum
+        },0)
+        var ProductOfArrayEle=array.reduce(function(acculumator,pro){
+            return acculumator * pro
+        },1)
+        console.log("sum is "+sumOfArrayEle);
+        console.log("pro is "+ProductOfArrayEle);
+
+
+        //ex
+        const phones = [
+            {
+                name: 'OPPO Reno10 5G (Ice Blue, 256 GB)',
+                price: 38999,
+                discount: 6000,
+                quantity: 2
+            },
+            {
+                name: 'Vivo18Pro 5G (Ice Blue, 256 GB)',
+                price: 28999,
+                discount: 6000,
+                quantity: 1
+            }
+        ];
+        const totalAmount = phones.reduce(function(acculumator, product) {
+            return acculumator + ((product.price - product.discount) * product.quantity);
+        }, 0);
+
+        console.log("your total amount is "+totalAmount+" rs");
+/*
+        const productsObj = {
+            'OPPO Reno10 5G (Ice Blue, 256 GB)': 38999,
+            'POCO M6 Pro 5G (Power Black, 256 GB)  (8 GB RAM)': 13499,
+            'APPLE iPhone 14 (Blue, 128 GB)': 58999
+        };
+
+        const formattedProducts = Object.keys(productsObj).reduce(function(acculumator, productName) {
+            return [...acculumator, {name: productName, price: productsObj[productName]}];
+        }, []);
+
+        const formattedProducts2 = Object.keys(productsObj).reduce((acculumator, productName) => [...acculumator, {name: productName, price: productsObj[productName]}], []);
+
+        console.log(formattedProducts2);*/
+    </script>
+</body>
+</html>

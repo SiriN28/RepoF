@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sort(arr=[],direction="aascendind"){
+            console.log("im going to sort",arr,direction);
+        }
+       sort([1,2,3])
+
+       const nums=[10,90,80,30];
+       function sortNums(numarr=[],sortOrder='ascending'){
+        if(sortOrder==='ascending'){
+            console.log(numarr.sort());
+        }else{
+            console.log(numarr.sort().reverse());
+        }
+       }
+       sortNums(nums);
+    </script>
+</body>
+</html>

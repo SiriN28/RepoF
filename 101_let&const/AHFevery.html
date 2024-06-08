@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const users=[
+            {
+                FirstName : "siri",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 79,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },
+            {
+                FirstName : "Venky",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 80,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },
+            {
+                FirstName : "sudheer",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 81,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },    
+            {
+                FirstName : "suma",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 81,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },    
+        ]
+
+       const isEveryUserHyd=users.every(function(corr){
+            return corr.address.city=="hyderabad";
+       })
+       console.log(isEveryUserHyd);
+
+
+       //ex
+       var people=[
+            { name : 'jack',age:50},
+            { name : 'johk',age:10},
+            { name : 'john',age:9},
+            { name : 'joy',age:15}
+        ]
+        var everyoneTeenage=people.every(function(firstt){
+            return firstt.age>10 && firstt.age<20;
+        })
+        console.log(everyoneTeenage)
+
+        //or
+
+        function one(hey){
+            return hey.age>10 && hey.age<20;
+        }
+        const u=people.every(one);
+        console.log(u);
+
+       
+    </script>
+</body>
+</html>

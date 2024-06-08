@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+    <script>
+         const colors=['red','green','yellow']
+
+          function transform(val){
+            return val.toUpperCase()
+        }
+        const captilize=colors.map(transform);
+        console.log(captilize); //['RED', 'GREEN', 'YELLOW']
+                //or
+        const cap=colors.map(function(va){
+            return va.toUpperCase()
+        })
+        console.log(cap);
+
+
+        const voters=[
+            {
+                FirstName : "siri",
+                LastName : "Nainalasetti",
+                dob :'2023-12-14T13:15:19.538Z'
+            },
+            {
+                FirstName : "isha",
+                LastName : "setti",
+                dob :'2023-12-14T13:15:19.538Z'
+            },
+            {
+                FirstName : "rishi",
+                LastName : "nala",
+                dob :'2023-12-14T13:15:19.538Z'
+            }
+        ]
+
+        const transfoemedVoters=voters.map(function(val){
+            return{...val,dobFormatte : moment(val.dob).format('DD/MM/YYYY') }
+        })
+        console.log(transfoemedVoters)
+
+
+    </script>
+    
+</body>
+</html>

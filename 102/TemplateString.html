@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const firstName="siri";
+        const lastName="N";
+        //let fullname=firstname+lastName   instead of doing this we use template string concept also
+        let fullName=`your full name is ${firstName} ${lastName}`;
+        console.log(fullName);
+
+        function hello(fn,ln){
+            return `goood mrng ${fn} ${ln} ! how are you man`
+        }
+        console.log(hello("my","h"));
+
+        const dateobj=new Date();
+        const datuuu=`${dateobj.getDate()}/${dateobj.getMonth()+1}/${dateobj.getFullYear()}`;
+        console.log(datuuu);
+    </script>
+</body>
+</html>

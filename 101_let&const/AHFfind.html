@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const users=[
+            {
+                FirstName : "siri",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 79,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },
+            {
+                FirstName : "Venky",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 80,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },
+            {
+                FirstName : "sudheer",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 81,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },    
+            {
+                FirstName : "suma",
+                LastName : "Nainalasetti",
+                address : {
+                    plotNo : 81,
+                    area : "kphp",
+                    city : "hyderabad",
+                    state : "teleanga",
+                    pincode : 533216
+                }
+            },    
+        ]
+
+       
+        const filteredVal=users.find(function(vittu){
+            return vittu.FirstName==="siri";
+        })
+        console.log(filteredVal);
+
+
+        var people=[
+            { name : 'jack',age:50},
+            { name : 'johk',age:10},
+            { name : 'john',age:9},
+            { name : 'joy',age:15}
+
+        ]
+        var firstTeenaher=people.find(function(firstt){
+            return firstt.age>10 && firstt.age<18;
+        })
+        console.log(firstTeenaher.name)//john       find() finds the first element
+        
+    </script>
+</body>
+</html>
